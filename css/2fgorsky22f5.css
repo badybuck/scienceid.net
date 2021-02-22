@@ -1,0 +1,267 @@
+/*TODO:После интеграции дизайна добавить содержимое в файл style.css и удалить*/
+
+.has-error input {
+    border-color: #ff5151;
+}
+
+.has-error .help-block {
+    color: #ff5151;
+}
+
+input[type="submit"].btn {
+    padding: 8.6px 14.17px;
+}
+
+.alert {
+    margin-top: 1rem;
+}
+
+.alert .close {
+    background: inherit;
+}
+
+.js-hidden {
+    display: none;
+}
+
+span.select2 {
+    width: 100% !important;
+}
+
+.user_menu a:hover {
+    color: #212121;
+}
+
+.user_menu * {
+    color: #212121;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.user_menu img {
+    max-height: 40px;
+    margin-right: 10px;
+}
+
+.user_menu .dropdown-item:hover {
+    background-color: inherit;
+    color: #bfbfbf;
+}
+
+.user_menu.dropdown .dropdown-menu {
+    margin-top: 25px;
+}
+
+.criteria span.select2 {
+    width: auto !important;
+}
+
+.criteria .form-group {
+    margin-bottom: 0;
+}
+
+.interests-structure div {
+    padding-left: 20px;
+    display: none;
+}
+
+.interests-structure .form-group {
+    margin-bottom: 0;
+}
+
+.interests-structure .custom-checkbox:last-child {
+    margin-bottom: 1rem;
+}
+
+
+.interests-structure h4, .interests-structure h5 {
+    cursor: pointer;
+}
+
+.interests-structure .third div {
+    display: block;
+}
+
+.interests-structure .third {
+    margin-left: 20px;
+}
+
+.interests-structure h4 {
+    font-size: 15px;
+}
+
+.interests-structure h5 {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.interests-structure .custom-checkbox, .interests-structure .custom-checkbox div {
+    display: block;
+}
+
+.profile__person-picture {
+    width: auto;
+    height: auto;
+    max-width: 314px;
+    max-height: 314px;
+}
+
+.publication--new:last-child {
+    margin-bottom: 30px;
+}
+
+.publication__header:hover {
+    text-decoration: underline;
+}
+
+.interests-structure h4 {
+    margin-bottom: 0;
+}
+
+.interests-structure .custom-checkbox + h5 {
+    margin-top: 1rem;
+}
+
+.mt-52 {
+    margin-top: 52px !important;
+}
+
+.challenge-radio label {
+    border-bottom: 1px solid rgba(231, 231, 231, 0.5);
+    margin-bottom: 17px;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.challenge-radio label b {
+    font-size: 16px;
+}
+
+.profile__user_header p {
+    margin-bottom: auto;
+    line-height: inherit;
+}
+
+.profile__user_header {
+    margin-bottom: 10px;
+}
+
+.section__content p {
+    line-height: 1.5;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.member__field_group-wrapper .fieldValue {
+    border: none;
+    width: 90%;
+}
+
+.custom__editable-challenge {
+    display: none;
+}
+
+.custom__editable-challenge select.form-control:not([size]):not([multiple]) {
+    height: 2rem;
+}
+
+.custom__editable-challenge .form-control:focus {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow:none;
+}
+
+.menu .dropdown-item:hover, .menu .dropdown-item:focus {
+    background: inherit;
+}
+
+.member__occupation .form-control, .member__occupation .form-control:focus {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow:none;
+}
+
+.preloader {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background: url("../img/preloader.svg");
+}
+
+#member-challenges {
+    position: relative;
+}
+
+.help-block {
+    color: red;
+    display: inline-block;
+    width: 100%;
+}
+
+.pagination {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+.pagination li.active a {
+    color: #000;
+}
+
+.ui-autocomplete {
+    z-index: 99994;
+}
+
+.form-errors-summary {
+    margin: 20px 0;
+}
+
+.form-errors-summary p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.form-errors-summary ul {
+    margin: 0;
+}
+
+.form-errors-summary ul li {
+    color: #de0000;
+    font-size: 15px;
+}
+
+a.dp-sort.asc:after,
+a.dp-sort.desc:after {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    padding-left: 2px;
+    position: relative;
+    top: -2px;
+}
+
+a.dp-sort.asc:after {
+    content: "\2193";
+}
+
+a.dp-sort.desc:after {
+    content: "\2191";
+}

@@ -1,0 +1,97 @@
+.member__timeline-date {
+    font-size: 16px;
+}
+.member__publication-date {
+    font-size: 16px;
+}
+
+.member__front {
+    padding: 40px 0 20px;
+}
+
+.mt-lg-80, .my-lg-80 {
+    margin-top: 30px !important;
+
+}
+.member__front * {
+
+    font-size: 15px;
+}
+
+.member__info {
+    margin-top: -10px
+}
+
+.member__info-header {
+    margin-right: 40px;
+}
+
+.member__section-header {
+    font-size: 20px;
+}
+
+
+
+.main__title {
+    font-weight: 400;
+}
+
+.header__wrapper {
+    max-width: 1230px;
+    margin: 0 auto;
+}
+
+.main__cover-content {
+    margin-bottom: 30px;
+}
+
+.main__bottom {
+    padding: 50px 0 70px;
+}
+
+.main__challenges-content:before {
+    bottom: -89px;
+}
+
+.main__challenge:after {
+    bottom: -77px;
+}
+
+
+.main__challenges-target {
+    margin-top: 150px;
+}
+
+.main__challenges {
+    margin-bottom: 40px;
+}
+
+.main__events {
+    margin-top: 60px;
+}
+
+.event-new__title {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.member__name {
+    font-size: 42px;
+}
+
+.member__website-id, #member-challenges * {
+    font-size: 1rem;
+}
+
+.main__members-header {
+    font-size: 30px;
+}
+
+.main__cover-btn {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.registration p.p--sm {
+    font-size: 21px;
+}

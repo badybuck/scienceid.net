@@ -1,0 +1,202 @@
+doctype html
+html(lang='ru-RU')
+	// Mirrored from scienceid.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 20 Feb 2021 09:33:21 GMT
+	// Added by HTTrack
+	head
+		meta(http-equiv='content-type' content='text/html;charset=UTF-8')
+		// /Added by HTTrack
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible' content='IE=Edge')
+		title
+			| --SCIENCE_ID--
+		// suppress HtmlUnknownTarget
+		link(rel='apple-touch-icon' sizes='180x180' href='apple-touch-icon.png')
+		// suppress HtmlUnknownTarget
+		link(rel='icon' type='image/png' sizes='32x32' href='favicon-32x32.png')
+		// suppress HtmlUnknownTarget
+		link(rel='icon' type='image/png' sizes='16x16' href='favicon-16x16.png')
+		// suppress HtmlUnknownTarget
+		link(rel='manifest' href='site.webmanifest')
+		// suppress HtmlUnknownTarget
+		link(rel='mask-icon' href='safari-pinned-tab.svg' color='#0284d2')
+		meta(name='apple-mobile-web-app-title' content='SCIENCE-ID')
+		meta(name='application-name' content='SCIENCE-ID')
+		meta(name='msapplication-TileColor' content='#0284d2')
+		meta(name='theme-color' content='#ffffff')
+		meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=0')
+		meta(name='format-detection' content='telephone=no')
+		meta(name='mailru-verification' content='aa14ef43210cb631')
+		meta(name='csrf-param' content='_csrf')
+		meta(name='csrf-token' content='Ajpn_ruX_-oZyO9ozOmBzMmeoANPn6HE3IXv296cM1pmfgzMis3O3FP-twyAv_OkqvjPQAvI4qi6sa2xqKtQHg==')
+		link(href='css/1stylefc59.css?v=1605178297' rel='stylesheet')
+		link(href='css/stylec0c7.css?v=1605178298' rel='stylesheet')
+		link(href='css/3evgenib9b5.css?v=1604335222' rel='stylesheet')
+		link(href='css/2fgorsky22f5.css?v=1571670897' rel='stylesheet')
+		link(href='css/4maer22f5.css?v=1571670897' rel='stylesheet')
+		link(href='css/5anton22f5.css?v=1571670897' rel='stylesheet')
+		link(href='css/roman311a.css?v=1581333435' rel='stylesheet')
+		link(href='css/tooltipster.bundle4fe5.css?v=1571670899' rel='stylesheet')
+		link(href='css/custom.css' rel='stylesheet')
+	body#body(data-public-url='index.html')
+		.wrapper
+			.header
+				.container
+					.row
+						.col-12
+							.header__wrapper
+								a.logo(href='index.html') SCIENCE-ID
+								.menu
+									a.menu__btn(href='#')
+									ul.menu__content
+										li.menu__item
+											a.menu__link(href='login.html')
+												| Пользователи
+										li.menu__item
+											a.menu__link(href='login.html')
+												| Мероприятия
+										li.menu__item
+											a.menu__link(href='login.html')
+												| Вакансии
+										li.menu__item
+											a.menu__link(href='login.html')
+												| Группы
+										li.menu__item
+											a.menu__link
+											a.menu__link(href='news.html')
+												| Новости
+										li.menu__item
+											a.menu__link(href='contacts.html')
+												| Контакты
+								.header__enter
+									.guest.user__btn
+										a.header__enter-button(href='#')
+									.header__enter-content
+										a.btn.btn-link.header__enter-link(href='login.html')
+											| Войти
+										a.btn.btn-primary.header__enter-link(href='registration.html')
+											| Регистрация
+			.subheader.subheader--high
+				.container
+					.row
+						.col-12
+							h1.subheader__title.subheader__title--sm СТИЛЬ САМОРЕГУЛЯЦИИ ПОВЕДЕНИЯ&nbsp;&mdash; ССПМ 2020
+			.header-block
+				.container
+					.wrap
+						.row
+							.col-md-3
+								a.link-back.btn.btn--gray(href="#") Назад к&nbsp;новостям
+							.col-md-9
+								p.header-block__text
+									b Инструкция: 
+									| Предлагаем Вам ряд высказываний об&nbsp;индивидуальных особенностях человека. Последовательно прочитав каждое высказывание, определите, характерно&nbsp;ли оно для Вас и&nbsp;выберите один из&nbsp;пяти возможных вариантов ответов, отметив его в&nbsp;соответствующей графе. Помните, что не&nbsp;может быть хороших или плохих ответов, так как это не&nbsp;оценка, а&nbsp;лишь выявление индивидуальных особенностей.
+			.interview
+				.container
+					.wrap
+						.row
+							.col-md-3
+							.col-md-9
+								.questions
+									.questions__item.questions__item--done
+									.questions__item.questions__item--done
+									.questions__item.questions__item--done
+									.questions__item.questions__item--current
+									- for (var x = 0; x < 23; x++)
+										.questions__item
+								.interview__question Не&nbsp;всегда вовремя замечаю изменения обстоятельств и&nbsp;из-за этого терплю неудачи
+								.interview__answers
+									.interview__subtitle Выберите вариант ответа:
+									.row.row--main
+										mixin radio2(t1,n='n')
+											.col-6.col-sm-4.col-lg
+												label.custom-radio-block
+													input.custom-radio-block__input(type="radio" name= n)&attributes(attributes)
+													span.custom-radio-block__title!= t1
+										+radio2(`Неверно`)
+										+radio2(`Пожалуй, неверно`)
+										+radio2(`Затрудняюсь ответить`)
+										+radio2(`Пожалуй, верно`)
+										+radio2(`Верно`)
+									a.btn.btn-primary.btn-primary--light(href='#') Следующий вопрос
+
+
+
+
+
+
+		.footer
+			.container
+				.row
+					.col-12
+						.d-flex.flex-column.align-items-center
+							.socials
+								a.socials__item.socials__item--fb(target='_blank' href='https://www.facebook.com/Science-ID-562632444117613')
+								a.socials__item.socials__item--vk(target='_blank' href='https://vk.com/public165202495')
+								a.socials__item.socials__item--ok(target='_blank' href='https://ok.ru/group/55660769509393')
+								// <a class="socials__item socials__item--go" href="#"></a>
+								a.socials__item.socials__item--ig(target='_blank' href='https://www.instagram.com/scienceid_net')
+								a.socials__item.socials__item--tw(target='_blank' href='https://twitter.com/science_id_net')
+								a.socials__item.socials__item--yt(target='_blank' href='https://www.youtube.com/channel/UCOUx1rGKd0gB7FIFKz7oF9A')
+							.footer__sitemap
+								a.footer__sitemap-link(href='login.html')
+									| Пользователи
+								a.footer__sitemap-link(href='login.html')
+									| Мероприятия
+								a.footer__sitemap-link(href='login.html')
+									| Вакансии
+								a.footer__sitemap-link(href='login.html')
+									| Группы
+								a.footer__sitemap-link(href='news.html')
+									| Новости
+								a.footer__sitemap-link(href='big-challenges.html')
+									| Курс СНТР
+								a.footer__sitemap-link(href='quiz.html')
+									| Опросы
+								a.footer__sitemap-link(href='about.html')
+									| О проекте
+								a.footer__sitemap-link(href='contacts.html')
+									| Контакты
+								a.footer__sitemap-link(href='faq.html')
+									| Помощь
+							.footer__sitemap
+								form(action='https://scienceid.net/search' method='post')
+									input(type='hidden' name='_csrf' value='Ajpn_ruX_-oZyO9ozOmBzMmeoANPn6HE3IXv296cM1pmfgzMis3O3FP-twyAv_OkqvjPQAvI4qi6sa2xqKtQHg==')
+									.search__form-content
+										button.search__btn(type='submit')
+										input.sitemap__input(placeholder='Поиск по сайту' name='search_field')
+							.footer__copyright © 2021 Science - ID
+				.row.footer__afterwords
+					.col-md-6
+						| Проект находится в разработке
+					.col-md-6
+						| При поддержке Министерства науки и высшего образования РФ
+		script(src='js/scripts05db.js?v=1585816358')
+		script(src='assets/71105df0/yii19b7.js?v=1553535848')
+		script(src='assets/b24ee16d/js/Event19b7.js?v=1553535848')
+		script(src='js/tooltipster.bundle9f30.js?v=1571670977')
+		script(src='js/evgeni5f20.js?v=1582178478')
+		script(src='js/Globalsd4bf.js?v=1571670974')
+		script(src='../stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js')
+		script(src='js/Vacanciesd4bf.js?v=1571670974')
+		// Global site tag (gtag.js) - Google Analytics
+		script(async='' src='https://www.googletagmanager.com/gtag/js?id=UA-120801196-1')
+		script.
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'UA-120801196-1');
+		// Google Tag Manager
+		script.
+			(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+			'gtm.start':
+			new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+			j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+			'../www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-K2ZR9FK');
+		// End Google Tag Manager
+		// Google Tag Manager (noscript)
+		noscript
+			iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-K2ZR9FK' height='0' width='0' style='display:none;visibility:hidden')
+		// Mirrored from scienceid.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 20 Feb 2021 09:33:46 GMT
