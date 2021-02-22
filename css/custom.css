@@ -151,6 +151,7 @@
 		min-height: 75px;
 		padding: 12px 10px;
 		margin-bottom: 15px;
+		cursor: pointer;
 }
 @media (min-width: 768px) {
 		.custom-radio-block {
@@ -170,6 +171,7 @@
 		height: 100%;
 		border: 1px solid rgba(67, 150, 247, 0.2);
 		border-radius: 5px;
+		cursor: pointer;
 }
 .custom-radio-block__input:checked {
 		background: rgba(67, 150, 247, 0.2);
@@ -201,8 +203,7 @@
 		margin-bottom: 20px;
 }
 .diagram__result svg {
-		max-width: 498px;
-		max-height: 498px;
+		max-width: 100%;
 }
 .diagram__note {
 		position: absolute;

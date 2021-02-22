@@ -135,6 +135,7 @@ $primary: #4396f7;
 	min-height: 75px;
 	padding: 12px 10px;
 	margin-bottom: 15px;
+	cursor: pointer;
 	@media (min-width: 768px) {
 		max-width: 170px;
 		min-height: 105px;
@@ -151,6 +152,7 @@ $primary: #4396f7;
 		height: 100%;
 		border: 1px solid rgba(67, 150, 247, 0.2);
 		border-radius: 5px;
+		cursor: pointer;
 		&:checked {
 			background: rgba(67, 150, 247, 0.2);
 			border: 2px solid $primary;
@@ -180,8 +182,7 @@ $primary: #4396f7;
 		position: relative;
 		margin-bottom: 20px;
 		svg	{
-			max-width: 498px;
-			max-height: 498px;
+			max-width: 100%;
 		}
 	}
 	&__note {
