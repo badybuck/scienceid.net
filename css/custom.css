@@ -1,4 +1,8 @@
-.wrap {
+:root {
+		--primary: #4396f7;
+}
+
+color .wrap {
 		max-width: 1170px;
 		margin: 0 auto;
 }
@@ -206,7 +210,6 @@
 		max-width: 100%;
 }
 .diagram__note {
-		position: absolute;
 		font-weight: bold;
 		font-size: 16px;
 		line-height: 26px;
@@ -358,4 +361,183 @@
 				width: 100%;
 				margin-bottom: 10px;
 		}
+}
+
+:root {
+		--size-dot: 13px;
+		--ell: 450px;
+		--ellX: translateX(calc(-1 * (var(--ell) - 40px) / 2));
+		--degStart: 105deg;
+		--degStep: 30deg;
+		--step: 1;
+}
+@media (max-width: 767.98px) {
+		:root {
+				--ell: 300px;
+		}
+}
+
+.diagram-block {
+		height: var(--ell);
+		position: relative;
+}
+@media (max-width: 767.98px) {
+		.diagram-block {
+				margin-left: auto;
+				margin-right: auto;
+				width: var(--ell);
+				height: var(--ell);
+		}
+}
+
+#tooltip {
+		background-color: #333;
+		color: white;
+		padding: 5px 10px;
+		border-radius: 4px;
+		font-size: 13px;
+}
+
+.diagram-block-item {
+		position: absolute;
+		border: 2px solid #4396f7;
+		border-radius: 50%;
+		border-radius: 50%;
+		width: calc(var(--size-dot) * 2);
+		height: calc(var(--size-dot) * 2);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		left: 0;
+		right: 0;
+		background-color: #fff;
+		cursor: pointer;
+}
+.diagram-block-item::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		left: 0;
+		right: 0;
+		width: 80%;
+		height: 80%;
+		border-radius: 50%;
+		opacity: 0;
+		transition: all 0.36s;
+		background-color: #4396f7;
+}
+.diagram-block-item:hover::before {
+		opacity: 1;
+}
+.diagram-block-item:nth-child(1) {
+		transform: rotate(calc(var(--degStart) + var(--degStep) * 1)) var(--ellX);
+}
+.diagram-block-item:nth-child(1) .diagram-block-item-toltip {
+		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 1)));
+}
+.diagram-block-item:nth-child(2) {
+		transform: rotate(calc(var(--degStart) + var(--degStep) * 2)) var(--ellX);
+}
+.diagram-block-item:nth-child(2) .diagram-block-item-toltip {
+		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 2)));
+}
+.diagram-block-item:nth-child(3) {
+		transform: rotate(calc(var(--degStart) + var(--degStep) * 3)) var(--ellX);
+}
+.diagram-block-item:nth-child(3) .diagram-block-item-toltip {
+		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 3)));
+}
+.diagram-block-item:nth-child(4) {
+		transform: rotate(calc(var(--degStart) + var(--degStep) * 4)) var(--ellX);
+}
+.diagram-block-item:nth-child(4) .diagram-block-item-toltip {
+		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 4)));
+}
+.diagram-block-item:nth-child(5) {
+		transform: rotate(calc(var(--degStart) + var(--degStep) * 5)) var(--ellX);
+}
+.diagram-block-item:nth-child(5) .diagram-block-item-toltip {
+		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 5)));
+}
+.diagram-block-item:nth-child(6) {
+		transform: rotate(calc(var(--degStart) + var(--degStep) * 6)) var(--ellX);
+}
+.diagram-block-item:nth-child(6) .diagram-block-item-toltip {
+		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 6)));
+}
+.diagram-block-item:nth-child(7) {
+		transform: rotate(calc(var(--degStart) + var(--degStep) * 7)) var(--ellX);
+}
+.diagram-block-item:nth-child(7) .diagram-block-item-toltip {
+		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 7)));
+}
+.diagram-block-item:nth-child(8) {
+		transform: rotate(calc(var(--degStart) + var(--degStep) * 8)) var(--ellX);
+}
+.diagram-block-item:nth-child(8) .diagram-block-item-toltip {
+		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 8)));
+}
+.diagram-block-item:nth-child(9) {
+		transform: rotate(calc(var(--degStart) + var(--degStep) * 9)) var(--ellX);
+}
+.diagram-block-item:nth-child(9) .diagram-block-item-toltip {
+		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 9)));
+}
+.diagram-block-item:nth-child(10) {
+		transform: rotate(calc(var(--degStart) + var(--degStep) * 10)) var(--ellX);
+}
+.diagram-block-item:nth-child(10) .diagram-block-item-toltip {
+		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 10)));
+}
+.diagram-block-item:nth-child(11) {
+		transform: rotate(calc(var(--degStart) + var(--degStep) * 11)) var(--ellX);
+}
+.diagram-block-item:nth-child(11) .diagram-block-item-toltip {
+		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 11)));
+}
+.diagram-block-item:nth-child(12) {
+		transform: rotate(calc(var(--degStart) + var(--degStep) * 12)) var(--ellX);
+}
+.diagram-block-item:nth-child(12) .diagram-block-item-toltip {
+		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 12)));
+}
+
+.diagram-block-item-toltip {
+		position: absolute;
+		background: #FFFFFF;
+		box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+		border-radius: 30px 16px 16px 30px;
+		top: 50%;
+		padding: 10px;
+		min-width: 320px;
+		font-size: 14px;
+}
+.diagram-block-item-toltip::before {
+		content: attr(data-title);
+}
+.diagram-block-item-toltip::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		bottom: auto;
+		transform: translateY(-50%);
+		right: -5px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: #fff;
+}
+
+.tooltipster-base {
+		background-color: #fff;
+		box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+		border-radius: 30px;
+		padding: 10px;
+		padding-bottom: 0;
+		height: auto !important;
+		font-size: 12px;
+		line-height: 1.2;
 }

@@ -1,5 +1,11 @@
 @import "_mixin.scss";
 $primary: #4396f7;
+:root{
+
+	--primary: #{$primary};
+}
+
+color
 .wrap {
 	max-width: 1170px;
 	margin: 0 auto;
@@ -184,7 +190,7 @@ $primary: #4396f7;
 		}
 	}
 	&__note {
-		position: absolute;
+		// position: absolute;
 		font-weight: bold;
 		font-size: 16px;
 		line-height: 26px;
@@ -324,4 +330,131 @@ $primary: #4396f7;
 			margin-bottom: 10px;
 		}
 	}
+}
+
+:root {
+
+	--size-dot: 13px;
+	--ell: 450px;
+	@media (max-width: 767.98px){
+		--ell: 300px;
+
+	}
+	--ellX: translateX(calc(-1 * (var(--ell) - 40px) / 2));
+	--degStart: 105deg;
+	--degStep: 30deg;
+	--step: 1;
+}
+
+.diagram-block{
+	// margin-top: 20px;
+	height: var(--ell);
+	position: relative;
+	@media (max-width: 767.98px){
+		margin-left: auto;
+		margin-right: auto;
+		width: var(--ell);
+		height: var(--ell);
+	}
+}
+// 	@include block;
+// 	.chartjs-size-monitor{
+// 		display: none;
+// 	}
+// 	canvas{
+// 		@include a-cent;
+// 		width: 100% !important;
+// 		height: 100% !important;
+// 	}
+// }
+
+
+#tooltip {
+	background-color: #333;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 4px;
+	font-size: 13px;
+}
+
+.diagram-block-item{
+	position: absolute;
+	border: 2px solid $primary;
+	border-radius: 50%;
+	border-radius: 50%;
+	width: calc(var(--size-dot) * 2);
+	height: calc(var(--size-dot) * 2);
+	// top: var(--size-dot);
+	// left: calc(50% - var(--size-dot));
+	@include a-cent;
+// transform-origin: 100% 26px;
+	background-color: #fff;
+	cursor: pointer;
+	&::before{
+		content: '';
+		@include a-cent;
+		width: 80%;
+		height: 80%;
+		border-radius: 50%; 
+		opacity: 0;
+		@include mt;
+		background-color: $primary;
+	}
+	&:hover{
+		&::before{
+			opacity: 1;
+		}
+	}
+
+	@for $i from 1 through 12 { 
+			&:nth-child(#{$i}) {
+				transform: rotate(calc(var(--degStart) + var(--degStep) * #{$i})) var(--ellX);
+				.diagram-block-item-toltip{
+						transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * #{$i})));
+				}
+			}
+		} 
+
+}
+
+.diagram-block-item-toltip{
+	position: absolute;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+	border-radius: 30px 16px 16px 30px;
+	top: 50%;
+	padding: 10px;
+	min-width: 320px;
+	font-size: 14px;
+	&::before{
+		content: attr(data-title);
+	}
+	&::after{
+		content: '';
+		@include a-cent1(y);
+		right: -5px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: #fff;
+	}
+}
+
+// .diagram-block-item-toltip{
+// 	 background-color: #333;
+// 	 color: white;
+// 	 padding: 5px 10px;
+// 	 border-radius: 4px;
+// 	 font-size: 13px;
+// }
+
+.tooltipster-base{
+	background-color: #fff;
+		box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+		border-radius: 30px ;
+		padding: 10px;
+		padding-bottom: 0;
+		height: auto !important;
+		font-size: 12px;
+		line-height: 1.2;
 }
