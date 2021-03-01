@@ -310,7 +310,7 @@
 .science-year {
 		margin-top: 80px;
 		padding: 25px 20px;
-		background-image: url(/img/science-year.png);
+		background-image: url(../img/science-year.png);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
