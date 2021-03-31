@@ -511,74 +511,152 @@ color .wrap {
 .diagram-block-item:nth-child(1) {
 		transform: rotate(calc(var(--degStart) + var(--degStep) * 1)) var(--ellX);
 }
+.diagram-block-item:nth-child(1) .diagram-block-item__title,
 .diagram-block-item:nth-child(1) .diagram-block-item-toltip {
 		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 1)));
 }
 .diagram-block-item:nth-child(2) {
 		transform: rotate(calc(var(--degStart) + var(--degStep) * 2)) var(--ellX);
 }
+.diagram-block-item:nth-child(2) .diagram-block-item__title,
 .diagram-block-item:nth-child(2) .diagram-block-item-toltip {
 		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 2)));
 }
 .diagram-block-item:nth-child(3) {
 		transform: rotate(calc(var(--degStart) + var(--degStep) * 3)) var(--ellX);
 }
+.diagram-block-item:nth-child(3) .diagram-block-item__title,
 .diagram-block-item:nth-child(3) .diagram-block-item-toltip {
 		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 3)));
 }
 .diagram-block-item:nth-child(4) {
 		transform: rotate(calc(var(--degStart) + var(--degStep) * 4)) var(--ellX);
 }
+.diagram-block-item:nth-child(4) .diagram-block-item__title,
 .diagram-block-item:nth-child(4) .diagram-block-item-toltip {
 		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 4)));
 }
 .diagram-block-item:nth-child(5) {
 		transform: rotate(calc(var(--degStart) + var(--degStep) * 5)) var(--ellX);
 }
+.diagram-block-item:nth-child(5) .diagram-block-item__title,
 .diagram-block-item:nth-child(5) .diagram-block-item-toltip {
 		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 5)));
 }
 .diagram-block-item:nth-child(6) {
 		transform: rotate(calc(var(--degStart) + var(--degStep) * 6)) var(--ellX);
 }
+.diagram-block-item:nth-child(6) .diagram-block-item__title,
 .diagram-block-item:nth-child(6) .diagram-block-item-toltip {
 		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 6)));
 }
 .diagram-block-item:nth-child(7) {
 		transform: rotate(calc(var(--degStart) + var(--degStep) * 7)) var(--ellX);
 }
+.diagram-block-item:nth-child(7) .diagram-block-item__title,
 .diagram-block-item:nth-child(7) .diagram-block-item-toltip {
 		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 7)));
 }
 .diagram-block-item:nth-child(8) {
 		transform: rotate(calc(var(--degStart) + var(--degStep) * 8)) var(--ellX);
 }
+.diagram-block-item:nth-child(8) .diagram-block-item__title,
 .diagram-block-item:nth-child(8) .diagram-block-item-toltip {
 		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 8)));
 }
 .diagram-block-item:nth-child(9) {
 		transform: rotate(calc(var(--degStart) + var(--degStep) * 9)) var(--ellX);
 }
+.diagram-block-item:nth-child(9) .diagram-block-item__title,
 .diagram-block-item:nth-child(9) .diagram-block-item-toltip {
 		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 9)));
 }
 .diagram-block-item:nth-child(10) {
 		transform: rotate(calc(var(--degStart) + var(--degStep) * 10)) var(--ellX);
 }
+.diagram-block-item:nth-child(10) .diagram-block-item__title,
 .diagram-block-item:nth-child(10) .diagram-block-item-toltip {
 		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 10)));
 }
 .diagram-block-item:nth-child(11) {
 		transform: rotate(calc(var(--degStart) + var(--degStep) * 11)) var(--ellX);
 }
+.diagram-block-item:nth-child(11) .diagram-block-item__title,
 .diagram-block-item:nth-child(11) .diagram-block-item-toltip {
 		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 11)));
 }
 .diagram-block-item:nth-child(12) {
 		transform: rotate(calc(var(--degStart) + var(--degStep) * 12)) var(--ellX);
 }
+.diagram-block-item:nth-child(12) .diagram-block-item__title,
 .diagram-block-item:nth-child(12) .diagram-block-item-toltip {
 		transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * 12)));
+}
+.diagram-block-item:hover .diagram-block-item__title, .diagram-block-item.active .diagram-block-item__title {
+		background-color: #4396f7;
+		color: #fff;
+}
+.diagram-block-item:nth-child(1) .diagram-block-item__title {
+		top: -86px;
+		left: -200px;
+}
+.diagram-block-item:nth-child(2) .diagram-block-item__title {
+		top: -49px;
+		left: -188px;
+}
+.diagram-block-item:nth-child(3) .diagram-block-item__title {
+		top: 6px;
+		left: -197px;
+}
+.diagram-block-item:nth-child(4) .diagram-block-item__title {
+		top: 53px;
+		left: -184px;
+}
+.diagram-block-item:nth-child(5) .diagram-block-item__title {
+		top: 53px;
+		right: 11px;
+}
+.diagram-block-item:nth-child(6) .diagram-block-item__title {
+		top: -52px;
+		right: 1px;
+}
+.diagram-block-item:nth-child(7) .diagram-block-item__title {
+		top: -103px;
+		right: 58px;
+}
+.diagram-block-item:nth-child(8) .diagram-block-item__title {
+		top: -53px;
+		right: 58px;
+}
+.diagram-block-item:nth-child(9) .diagram-block-item__title {
+		top: -31px;
+		right: 45px;
+}
+.diagram-block-item:nth-child(10) .diagram-block-item__title {
+		top: 34px;
+		right: 36px;
+}
+.diagram-block-item:nth-child(11) .diagram-block-item__title {
+		top: 24px;
+		right: 36px;
+}
+.diagram-block-item:nth-child(12) .diagram-block-item__title {
+		top: -50px;
+		right: 30px;
+}
+
+.diagram-block-item__title {
+		padding: 1rem 5px;
+		background: #FFFFFF;
+		border-radius: 10px;
+		box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+		text-align: center;
+		font-size: 12px;
+		width: 170px;
+		min-height: 57px;
+		line-height: 1.1666666667;
+		cursor: pointer;
+		transition: all 0.36s;
 }
 
 .diagram-block-item-toltip {
@@ -699,4 +777,67 @@ color .wrap {
 				width: 100%;
 				margin-bottom: 10px;
 		}
+}
+.diagram-block-item__title {
+		position: absolute;
+}
+
+.col-border {
+		border-left: 1px solid #000000;
+		padding-left: 30px;
+}
+
+.diagram__content-right {
+		font-size: 14px;
+		max-width: 400px;
+}
+.diagram__content-right ul {
+		padding-left: 20px;
+}
+.diagram__content-right li::marker {
+		color: #4396f7;
+}
+.diagram__content-right p {
+		font-size: 14px;
+}
+
+.accordion {
+		margin-bottom: 1rem;
+}
+.accordion__head {
+		font-weight: bold;
+		position: relative;
+		cursor: pointer;
+}
+.accordion__head-plus {
+		width: 1rem;
+		height: 1rem;
+		position: absolute;
+		right: 0;
+		top: 5px;
+}
+.accordion__head-plus::before, .accordion__head-plus::after {
+		content: "";
+		width: 1rem;
+		height: 2px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		left: 0;
+		right: 0;
+		background-color: #4396f7;
+		transition: all 0.36s;
+}
+.accordion__head-plus::after {
+		transform: rotate(90deg);
+}
+.accordion.active .accordion__head-plus::after {
+		transform: rotate(0);
+}
+.accordion p {
+		margin-bottom: 0;
+}
+.accordion:not(.active) .accordion__body {
+		display: none;
 }

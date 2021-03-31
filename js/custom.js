@@ -102,46 +102,46 @@ var config = {
 					1,
 				]
 			},
-			{
-				label: false,
-				backgroundColor: 'rgba(93,164,248, .8)',
-				borderColor: 'rgba(93,164,248, 0)',
-				pointBackgroundColor: 'transparent',
-				lineTension: .4,
-				tooltips: false,
-				data: [
-					2,
-					2,
-					1,
-					2,
-					2,
-					2,
-					1,
-					0,
-					2,
-					2,
-					1,
-					2,
+			// {
+			// 	label: false,
+			// 	backgroundColor: 'rgba(93,164,248, .8)',
+			// 	borderColor: 'rgba(93,164,248, 0)',
+			// 	pointBackgroundColor: 'transparent',
+			// 	lineTension: .4,
+			// 	tooltips: false,
+			// 	data: [
+			// 		2,
+			// 		2,
+			// 		1,
+			// 		2,
+			// 		2,
+			// 		2,
+			// 		1,
+			// 		0,
+			// 		2,
+			// 		2,
+			// 		1,
+			// 		2,
 
-				]
-			},
-			{
-				tooltips: false,
-				lineTension: .1,
-				label: false,
-				backgroundColor: 'transparent',
-				borderColor: '#4C9464',
-				pointBackgroundColor: 'transparent',
-				data: [
-					1,
-					randomScalingFactor(),
-					randomScalingFactor(),
-					randomScalingFactor(),
-					randomScalingFactor(),
-					randomScalingFactor(),
-					randomScalingFactor()
-				]
-			},
+			// 	]
+			// },
+			// {
+			// 	tooltips: false,
+			// 	lineTension: .1,
+			// 	label: false,
+			// 	backgroundColor: 'transparent',
+			// 	borderColor: '#4C9464',
+			// 	pointBackgroundColor: 'transparent',
+			// 	data: [
+			// 		1,
+			// 		randomScalingFactor(),
+			// 		randomScalingFactor(),
+			// 		randomScalingFactor(),
+			// 		randomScalingFactor(),
+			// 		randomScalingFactor(),
+			// 		randomScalingFactor()
+			// 	]
+			// },
 		]
 	},
 	options: {
@@ -181,4 +181,11 @@ window.onload = function () {
 	window.myRadar = new Chart(document.getElementById('canvas'), config);
 
 	$('.tooltip').tooltipster();
+
+	document.documentElement.addEventListener("click", function(event){
+		let target = event.target.closest(".accordion__head");
+		if (!target) return;
+		target.parentElement.classList.toggle("active");
+	})
+
 };

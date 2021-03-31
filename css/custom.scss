@@ -470,11 +470,108 @@ color .wrap {
 	@for $i from 1 through 12 {
 		&:nth-child(#{$i}) {
 			transform: rotate(calc(var(--degStart) + var(--degStep) * #{$i})) var(--ellX);
+			.diagram-block-item__title,
 			.diagram-block-item-toltip {
 				transform: rotate(calc(-1 * (var(--degStart) + var(--degStep) * #{$i})));
 			}
 		}
 	}
+	&:hover,
+	&.active{
+		.diagram-block-item__title{
+			background-color: $primary;
+			color: #fff;
+		}
+
+	}
+	&:nth-child(1) {
+		 .diagram-block-item__title{
+			 top: -86px;
+    	left: -200px;
+		 }
+	}
+	&:nth-child(2) {
+		 .diagram-block-item__title{
+			 top: -49px;
+    	left: -188px;
+		 }
+	}
+	&:nth-child(3) {
+		 .diagram-block-item__title{
+			 top: 6px;
+    		left: -197px;
+		 }
+	}
+	&:nth-child(4) {
+		 .diagram-block-item__title{
+				top: 53px;
+    left: -184px;
+		 }
+	}
+	&:nth-child(5) {
+		 .diagram-block-item__title{
+			    top: 53px;
+    right: 11px;
+		 }
+	}
+	&:nth-child(6) {
+		 .diagram-block-item__title{
+			    top: -52px;
+					right: 1px;
+		 }
+	}
+	&:nth-child(7) {
+		 .diagram-block-item__title{
+			    top: -103px;
+    right: 58px;
+		 }
+	}
+	&:nth-child(8) {
+		 .diagram-block-item__title{
+			    top: -53px;
+    right: 58px;
+		 }
+	}
+	&:nth-child(9) {
+		 .diagram-block-item__title{
+			top: -31px;
+    	right: 45px;
+		 }
+	}
+	&:nth-child(10) {
+		 .diagram-block-item__title{
+			 top: 34px;
+    right: 36px;
+		 }
+	}
+	&:nth-child(11) {
+		 .diagram-block-item__title{
+			 top: 24px;
+    right: 36px;
+		 }
+	}
+	&:nth-child(12) {
+		 .diagram-block-item__title{
+			 top: -50px;
+			right: 30px;
+		 }
+	}
+}
+
+.diagram-block-item__title{
+	padding: 1rem 5px;
+	background: #FFFFFF;
+border-radius: 10px;
+box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+text-align: center;
+font-size: 12px;
+width: 170px;
+min-height: 57px;
+line-height: (14 / 12);
+cursor: pointer;
+@include mt;
+
+
 }
 
 .diagram-block-item-toltip {
@@ -607,5 +704,74 @@ color .wrap {
 	.science-edge .btn-primary--light {
 		width: 100%;
 		margin-bottom: 10px;
+	}
+}
+
+
+.diagram-block-item{
+	
+}
+
+.diagram-block-item__title{
+	position: absolute;
+}
+
+.col-border{
+	border-left: 1px solid #000000;
+	padding-left: 30px;
+}
+.diagram__content-right{
+	font-size: 14px;
+	max-width: 400px;
+	ul{
+		padding-left: 20px;
+	}
+	li::marker{
+		color: $primary;
+	}
+	p{
+		font-size: 14px;
+	}
+}
+.accordion{
+	&__head{
+		font-weight: bold;
+		position: relative;
+		cursor: pointer;
+
+	}
+	&__head-plus{
+		width: 1rem;
+		height: 1rem;
+		position: absolute;
+		right: 0;
+		top: 5px;
+		&::before,
+		&::after{
+			content: '';
+			width: 1rem;
+			height: 2px;
+			@include a-cent;
+			background-color: $primary;
+			@include mt;
+
+		}
+		&::after{
+			transform: rotate(90deg);
+		}
+		
+	}
+	&.active &__head-plus{
+		
+		&::after{
+			transform: rotate(0);
+		}
+	}
+	p{
+		margin-bottom: 0;
+	}
+	margin-bottom: 1rem;
+	&:not(.active) &__body{
+		display: none;
 	}
 }
