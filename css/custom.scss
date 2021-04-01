@@ -775,3 +775,7 @@ cursor: pointer;
 		display: none;
 	}
 }
+
+.toggle-content:not(.active) {
+	display: none;
+}

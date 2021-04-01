@@ -841,3 +841,7 @@ color .wrap {
 .accordion:not(.active) .accordion__body {
 		display: none;
 }
+
+.toggle-content:not(.active) {
+		display: none;
+}
