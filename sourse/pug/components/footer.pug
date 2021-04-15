@@ -1,0 +1,53 @@
+mixin footer()
+	.footer
+		.container
+			.row
+				.col-12
+					.d-flex.flex-column.align-items-center
+						.socials
+							a.socials__item.socials__item--fb(href='https://www.facebook.com/Science-ID-562632444117613' target='_blank')
+							a.socials__item.socials__item--vk(href='https://vk.com/public165202495' target='_blank')
+							a.socials__item.socials__item--ok(href='https://ok.ru/group/55660769509393' target='_blank')
+							// <a class="socials__item socials__item--go" href="#"></a>
+							a.socials__item.socials__item--ig(href='https://www.instagram.com/scienceid_net' target='_blank')
+							a.socials__item.socials__item--tw(href='https://twitter.com/science_id_net' target='_blank')
+							a.socials__item.socials__item--yt(href='https://www.youtube.com/channel/UCOUx1rGKd0gB7FIFKz7oF9A' target='_blank')
+						.footer__sitemap
+							a.footer__sitemap-link(href='login.html')
+								| Пользователи
+							a.footer__sitemap-link(href='login.html')
+								| Мероприятия
+							a.footer__sitemap-link(href='login.html')
+								| Вакансии
+							a.footer__sitemap-link(href='login.html')
+								| Группы
+							a.footer__sitemap-link(href='news.html')
+								| Новости
+							a.footer__sitemap-link(href='big-challenges.html')
+								| Курс СНТР
+							a.footer__sitemap-link(href='quiz.html')
+								| Опросы
+							a.footer__sitemap-link(href='about.html')
+								| О проекте
+							a.footer__sitemap-link(href='contacts.html')
+								| Контакты
+							a.footer__sitemap-link(href='faq.html')
+								| Помощь
+						.footer__sitemap
+							form(action='https://scienceid.net/search' method='post')
+								input(name='_csrf' type='hidden' value='Ajpn_ruX_-oZyO9ozOmBzMmeoANPn6HE3IXv296cM1pmfgzMis3O3FP-twyAv_OkqvjPQAvI4qi6sa2xqKtQHg==')
+								.search__form-content
+									button.search__btn(type='submit')
+									input.sitemap__input(name='search_field' placeholder='Поиск по сайту')
+						.footer__copyright © 2021 Science - ID
+			.row.footer__afterwords
+				.col-md-6
+					| Проект находится в разработке
+				.col-md-6
+					| При поддержке Министерства науки и высшего образования РФ
+	script(src='js/utils.js')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js') 
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/tooltipster/4.2.8/js/tooltipster.bundle.min.js') 
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js') 
+	script(src='js/custom.js')
+	block

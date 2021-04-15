@@ -1,0 +1,171 @@
+.accordion-item{
+  @media (min-width: 1200px) {
+
+    --sp-x: #{rem(70)};
+  }
+  --sp-x: #{rem(40)};
+  background: #EEF1F3;
+  margin-bottom: rem(56);
+  p{
+    font-size: 14px;
+  }
+
+  &__head{
+    cursor: pointer;
+     @media (min-width: 576px) {
+       padding: var(--sp-x) var(--sp-x)  var(--sp-x);
+      }
+      padding: var(--sp-x) 15px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      right: calc(var(--sp-x) - 22px);
+      top: calc(var(--sp-x) + 15px);
+      background-image: url(../img/chevron-down.svg);
+      width: rem(22);
+      height: rem(11);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      @include mt;
+    }
+  }
+  &.active{
+    --display: block;
+  }
+  &__body{
+    display: var(--display, none);
+    padding: 0 var(--sp-x)  var(--sp-x);
+
+  }
+
+  .diagram{
+    padding-top: rem(100);
+  }
+  font-size: 14px;
+  &__list-item{
+    @media (min-width: 768px) {
+
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: rem(766 + 53 + 23);
+    }
+    margin-bottom: 40px;
+
+  }
+  &__count{
+    font-size: rem(40);
+    font-weight: bold;
+    width: rem(53 + 23);
+    flex:  0 0 auto;
+    &--sm{
+      font-size: rem(20);
+      width: rem(63 + 67);
+    }
+  }
+  &__table-wrap{
+    position: relative;
+    overflow-x: auto;
+    margin-bottom: 50px;
+  }
+  table{
+    min-width: 700px;
+  }
+  tbody{
+    th{
+    }
+    tr:last-child{
+      th,
+      td{
+        // display: none;
+        border: none;
+      }
+    }
+  }
+  td,
+  th{
+    border-bottom: 1px solid $primary;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    vertical-align: top;
+    &:first-child{
+      width: 200px;
+    }
+    &:nth-child(1),
+    &:nth-child(2){
+      @media (min-width: 1200px){
+
+        padding-right: rem(40);
+      }
+      padding-right: rem(15);
+    }
+  }
+
+  thead{
+    th{
+      border-width: 3px;
+      font-size: 12px;
+      color: #787878;
+      font-weight: normal;
+      vertical-align: bottom;
+    }
+  }
+  &__th-title{
+    max-width: 210px;
+  }
+  [scope="row"] {
+    font-size: rem(18);
+    font-weight: normal;
+    color: $primary;
+  }
+  .h6{
+    font-weight: normal;
+    font-size: 18px;
+  }
+  ul{
+    padding-left: rem(20);
+
+  }
+  li{
+    margin-bottom: 1rem;
+    &::marker{
+      color: $primary;
+    }
+  }
+
+  .diagram-block--sm{
+
+  }
+
+
+  &__footer{
+    padding-top: rem(100);
+  }
+  &__btns{
+    display: flex;
+    @include roww(30px, m);
+  }
+  &__btn{
+    width: calc(50% - 30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(64);
+    font-size: rem(16);
+    color: #fff !important;
+    white-space: normal;
+    border-radius: 10px;
+    font-weight: normal;
+    margin-bottom: 35px;
+    line-height: 144%;
+    &.btn-darken{
+      background: #2252AC;
+      border-color: #2252AC;
+      &:hover{
+        background: #12326f;
+        border-color: #12326f;
+      }
+    }
+  }
+}

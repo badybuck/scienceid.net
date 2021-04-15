@@ -1,0 +1,210 @@
+include components/head.pug
+include components/footer.pug
+include components/accordion.pug
+include components/logos.pug
++head()
+		.subheader
+			.container
+				.row
+					.col-12
+						h1.subheader__title.subheader__title--sm КОМПЕТЕНЦИИ В&nbsp;НАУКЕ
+		.header-block
+			.container.container--sm
+				.wrap
+					.row.row--lg
+						.col-md-auto.align-self-center
+							img(src="img/super-img.svg", alt="")
+						.col-md
+							p Раздел «Компетенции в науке» стартовал в апреле 2021 года, объявленного Президентом Российской Федерации Годом науки и технологий. 
+
+							p Основой данного раздела служит Модель компетенций в научной сфере и сопряженных сферах деятельности, разработанная Координационным советом по делам молодежи в научной и образовательной сферах Совета при Президенте Российской Федерации по науке и образованию совместно с Ассоциацией классических университетов России (АКУР) при поддержке Фонда президентских грантов.
+
+							p Раздел поможет начинающим и молодым исследователям определить набор компетенций, который будет им необходим для успешного профессионального развития в научной сфере и в других сферах деятельности, требующих определенного исследовательского потенциала, а также сориентироваться в возможных инструментах формирования и развития тех или иных компетенций. В течение 2021 года в личном кабинете пользователя ScienceID.net появится возможность оценить свои компетенции и получить рекомендации для эффективного профессионального развития. 
+		+accordion
+		+logos
+			//- mixin aacordion
+		
+
++footer()
+
+	script.
+										
+		var randomScalingFactor = function () {
+			return Math.round(Math.random() * 5);
+		};
+
+		let bgSet = {
+			label: false,
+			backgroundColor: 'rgba(93,164,248, .16)',
+			borderColor: 'rgba(93,164,248, 0)',
+			pointBackgroundColor: 'transparent',
+			lineTension: .4,
+			tooltips: false,
+		}
+
+		var color = Chart.helpers.color;
+		var config = {
+			type: 'radar',
+			data: {
+				labels: ['', '', '', '', '', '', '', '', '', '', '', ''],
+				datasets: [
+					{
+						...bgSet,
+						data: [
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+							5,
+						]
+					},
+					{
+						...bgSet,
+						data: [
+							4,
+							4,
+							4,
+							4,
+							4,
+							4,
+							4,
+							4,
+							4,
+							4,
+							4,
+							4,
+						]
+					},
+					{
+						...bgSet,
+						data: [
+							3,
+							3,
+							3,
+							3,
+							3,
+							3,
+							3,
+							3,
+							3,
+							3,
+							3,
+							3,
+						]
+					},
+					{
+						...bgSet,
+						data: [
+							2,
+							2,
+							2,
+							2,
+							2,
+							2,
+							2,
+							2,
+							2,
+							2,
+							2,
+							2,
+						]
+					},
+					{
+						...bgSet,
+						data: [
+							1,
+							1,
+							1,
+							1,
+							1,
+							1,
+							1,
+							1,
+							1,
+							1,
+							1,
+							1,
+						]
+					},
+					// {
+					// 	label: false,
+					// 	backgroundColor: 'rgba(93,164,248, .8)',
+					// 	borderColor: 'rgba(93,164,248, 0)',
+					// 	pointBackgroundColor: 'transparent',
+					// 	lineTension: .4,
+					// 	tooltips: false,
+					// 	data: [
+					// 		2,
+					// 		2,
+					// 		1,
+					// 		2,
+					// 		2,
+					// 		2,
+					// 		1,
+					// 		0,
+					// 		2,
+					// 		2,
+					// 		1,
+					// 		2,
+
+					// 	]
+					// },
+					// {
+					// 	tooltips: false,
+					// 	lineTension: .1,
+					// 	label: false,
+					// 	backgroundColor: 'transparent',
+					// 	borderColor: '#4C9464',
+					// 	pointBackgroundColor: 'transparent',
+					// 	data: [
+					// 		1,
+					// 		randomScalingFactor(),
+					// 		randomScalingFactor(),
+					// 		randomScalingFactor(),
+					// 		randomScalingFactor(),
+					// 		randomScalingFactor(),
+					// 		randomScalingFactor()
+					// 	]
+					// },
+				]
+			},
+			options: {
+				maintainAspectRatio: false,
+				elements: {
+					point: {
+						display: false,
+						radius: 0
+					}
+				},
+				legend: {
+					display: false,
+					// position: 'top',
+				},
+				title: {
+					display: false,
+				},
+				scale: {
+					spanGaps: true,
+					angleLines: {
+						// display: false
+						color: '#4396f7'
+					},
+					ticks: {
+						color: '#4396f7',
+						max: 5,
+						min: 0,
+						stepSize: 1
+						// display: false
+						// beginAtZero: true
+					}
+				}
+			}
+		};
+		window.myRadar = new Chart(document.getElementById('canvas'), config);
