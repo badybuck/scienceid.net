@@ -34,7 +34,7 @@
     --display: block;
   }
   &__body{
-    // display: var(--display, none);
+    display: var(--display, none);
     padding: 0 var(--sp-x)  var(--sp-x);
 
   }
