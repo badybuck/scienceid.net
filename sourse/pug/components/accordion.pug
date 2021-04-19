@@ -1,5 +1,5 @@
 mixin accordion-item(t)
-	+b.accordion-item
+	+b.accordion-item&attributes(attributes)
 		+e.head.h2= t 
 		+e.body
 			block
@@ -142,7 +142,7 @@ mixin accordion()
 						li Корректировки, улучшения, изменения 
 						li Оценка возможных перспектив дальнейших исследований и&nbsp;получения новых РИД
 
-		+accordion-item('Карта развития компетенций')
+		+accordion-item('Карта развития компетенций').active
 
 			.sModel
 				.diagram

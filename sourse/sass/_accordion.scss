@@ -1,8 +1,9 @@
 .accordion-item{
   @media (min-width: 1200px) {
 
-    --sp-x: #{rem(70)};
+    // --sp-x: #{rem(70)};
   }
+  --sp-y: #{rem(30)};
   --sp-x: #{rem(40)};
   background: #EEF1F3;
   margin-bottom: rem(56);
@@ -13,15 +14,15 @@
   &__head{
     cursor: pointer;
      @media (min-width: 576px) {
-       padding: var(--sp-x) var(--sp-x)  var(--sp-x);
+       padding: calc(var(--sp-y)) var(--sp-x)   ;
       }
-      padding: var(--sp-x) 15px;
+      padding: var( --sp-y) 15px;
     position: relative;
     &::before{
       content: '';
       position: absolute;
       right: calc(var(--sp-x) - 22px);
-      top: calc(var(--sp-x) + 15px);
+      top: calc(var( --sp-y) + 15px);
       background-image: url(../img/chevron-down.svg);
       width: rem(22);
       height: rem(11);
@@ -35,7 +36,7 @@
   }
   &__body{
     display: var(--display, none);
-    padding: 0 var(--sp-x)  var(--sp-x);
+    padding: 0 var(--sp-x)  var( --sp-y);
 
   }
 
