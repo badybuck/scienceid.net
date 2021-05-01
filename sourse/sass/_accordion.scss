@@ -1,110 +1,113 @@
-.accordion-item{
+.accordion-item {
   @media (min-width: 1200px) {
-
     // --sp-x: #{rem(70)};
   }
   --sp-y: #{rem(30)};
   --sp-x: #{rem(40)};
-  background: #EEF1F3;
+  background: #eef1f3;
   margin-bottom: rem(56);
-  p{
+
+  p {
     font-size: 14px;
   }
 
-  &__head{
+  &__head {
     cursor: pointer;
-     @media (min-width: 576px) {
-       padding: calc(var(--sp-y)) var(--sp-x)   ;
-      }
-      padding: var( --sp-y) 15px;
+    @media (min-width: 576px) {
+      padding: calc(var(--sp-y)) var(--sp-x);
+    }
+    padding: var(--sp-y) 15px;
     position: relative;
-    &::before{
-      content: '';
+
+    &::before {
+      content: "";
       position: absolute;
       right: calc(var(--sp-x) - 22px);
-      top: calc(var( --sp-y) + 15px);
+      top: calc(var(--sp-y) + 15px);
       background-image: url(../img/chevron-down.svg);
       width: rem(22);
       height: rem(11);
       background-size: 100% 100%;
       background-repeat: no-repeat;
+      transform: rotate(-90deg);
       @include mt;
     }
   }
-  &.active{
+  &.active {
     --display: block;
+    .accordion-item__head {
+      &::before {
+        transform: rotate(0);
+      }
+    }
   }
-  &__body{
+  &__body {
     display: var(--display, none);
-    padding: 0 var(--sp-x)  var( --sp-y);
-
+    padding: 0 var(--sp-x) var(--sp-y);
   }
 
-  .diagram{
+  .diagram {
     padding-top: rem(100);
   }
   font-size: 14px;
-  &__list-item{
+  &__list-item {
     @media (min-width: 768px) {
-
       display: flex;
       margin-left: auto;
       margin-right: auto;
       max-width: rem(766 + 53 + 23);
     }
     margin-bottom: 40px;
-
   }
-  &__count{
+  &__count {
     font-size: rem(40);
     font-weight: bold;
     width: rem(53 + 23);
-    flex:  0 0 auto;
-    &--sm{
+    flex: 0 0 auto;
+    &--sm {
       font-size: rem(20);
       width: rem(63 + 67);
     }
   }
-  &__table-wrap{
+  &__table-wrap {
     position: relative;
     overflow-x: auto;
     margin-bottom: 50px;
   }
-  table{
+  table {
     min-width: 700px;
   }
-  tbody{
-    th{
+  tbody {
+    th {
     }
-    tr:last-child{
+    tr:last-child {
       th,
-      td{
+      td {
         // display: none;
         border: none;
       }
     }
   }
   td,
-  th{
+  th {
     border-bottom: 1px solid $primary;
     padding-top: 15px;
     padding-bottom: 15px;
     vertical-align: top;
-    &:first-child{
+    &:first-child {
       width: 200px;
     }
     &:nth-child(1),
-    &:nth-child(2){
-      @media (min-width: 1200px){
-
+    &:nth-child(2) {
+      @media (min-width: 1200px) {
         padding-right: rem(40);
       }
       padding-right: rem(15);
     }
   }
 
-  thead{
-    th{
+  thead {
+    th {
       border-width: 3px;
       font-size: 12px;
       color: #787878;
@@ -112,7 +115,7 @@
       vertical-align: bottom;
     }
   }
-  &__th-title{
+  &__th-title {
     max-width: 210px;
   }
   [scope="row"] {
@@ -120,34 +123,32 @@
     font-weight: normal;
     color: $primary;
   }
-  .h6{
+
+  .h6 {
     font-weight: normal;
     font-size: 18px;
   }
-  ul{
+  ul {
     padding-left: rem(20);
-
   }
-  li{
+  li {
     margin-bottom: 1rem;
-    &::marker{
+    &::marker {
       color: $primary;
     }
   }
 
-  .diagram-block--sm{
-
+  .diagram-block--sm {
   }
 
-
-  &__footer{
+  &__footer {
     padding-top: rem(100);
   }
-  &__btns{
+  &__btns {
     display: flex;
     @include roww(30px, m);
   }
-  &__btn{
+  &__btn {
     width: calc(50% - 30px);
     display: flex;
     justify-content: center;
@@ -160,13 +161,138 @@
     font-weight: normal;
     margin-bottom: 35px;
     line-height: 144%;
-    &.btn-darken{
-      background: #2252AC;
-      border-color: #2252AC;
-      &:hover{
+    &.btn-darken {
+      background: #2252ac;
+      border-color: #2252ac;
+      &:hover {
         background: #12326f;
         border-color: #12326f;
       }
+    }
+  }
+  &--growth {
+    margin-bottom: 0;
+    position: relative;
+    &:last-child {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: calc(-1 * ((100vw - 1120px) / 2));
+        width: 100vw;
+        height: 1px;
+        background-color: #c4c4c4;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: calc(-1 * ((100vw - 1120px) / 2));
+      width: 100vw;
+      height: 1px;
+      background-color: #c4c4c4;
+    }
+    .accordion-item__head {
+      @media (min-width: 576px) {
+        padding-left: 0;
+      }
+      padding-left: 0;
+      &::before {
+      }
+      &.h2 {
+        font-size: 30px;
+        margin-bottom: 0;
+      }
+    }
+    .accordion-item__body {
+      padding: 0;
+    }
+
+    .accordion-item__subtitle {
+      position: relative;
+      top: -20px;
+      padding-bottom: 20px;
+    }
+
+    .accordion-item__list-item {
+      max-width: 1000px;
+      margin-left: 0;
+      margin-right: 0;
+      .h6 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  table.instruments {
+    width: 100%;
+    tbody {
+      th {
+      }
+      tr:last-child {
+        th,
+        td {
+          // display: none;
+          border-bottom: 1px solid $primary;
+        }
+      }
+      td {
+        text-align: center;
+        color: $primary;
+        font-size: 18px;
+        line-height: 180%;
+      }
+    }
+    td,
+    th {
+      border-bottom: 1px solid $primary;
+      vertical-align: middle;
+      &:first-child {
+        width: auto;
+      }
+      &:nth-child(1),
+      &:nth-child(2) {
+        padding: 0;
+      }
+    }
+
+    thead {
+      tr.heading {
+        th {
+          &:first-child {
+            width: 366px;
+            text-align: left;
+          }
+          &:nth-child(2) {
+            padding-left: 25px;
+            .instruments__th-title {
+              position: relative;
+              top: 10px;
+            }
+          }
+        }
+      }
+      th {
+        border-width: 3px;
+        font-size: 12px;
+        color: #787878;
+        font-weight: normal;
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+    &__th-title {
+      max-width: 366px;
+    }
+    [scope="row"] {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: (25 / 14);
+      color: #2b2b2b;
+      padding: 24px 24px 24px 0 !important;
+    }
+    [scope="colgroup"] {
+      border-color: transparent;
     }
   }
 }
