@@ -873,12 +873,18 @@ $primary: #4396f7;
 		}
 	}
 	&__title {
+		@include mt;
+		display: block;
 		font-weight: bold;
 		font-size: 18px;
 		line-height: (26 / 18);
 		text-transform: uppercase;
 		text-decoration-line: underline;
 		height: 75px;
+		color: #000;
+		&:hover {
+			color: $primary;
+		}
 	}
 	&__img-wrap {
 		img {

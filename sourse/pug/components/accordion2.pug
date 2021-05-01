@@ -35,7 +35,7 @@ mixin accordion2()
 						mixin item(t, i)
 							.col-3
 								+e.item&attributes(attributes)
-									+e.title.text-sm-center!=t
+									+e.title(href='#').text-sm-center!=t
 									+e.img-wrap
 										img(src=`img/diagram-base-${i}.svg`, alt="")
 						+item(`Начинающий исследователь`, 1).arrow
