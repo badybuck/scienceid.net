@@ -857,18 +857,30 @@ $primary: #4396f7;
 	}
 	&__item {
 		position: relative;
+	}
+	.tabs__btn{
+		cursor: pointer;
 		margin-bottom: 170px;
-		&.arrow {
-			&::after {
-				content: "";
-				@include a-cent(x);
-				position: absolute;
-				width: 186px;
-				height: 57px;
-				bottom: -57px;
-				background-image: url(../img/brace.svg);
-				background-size: cover;
-				background-repeat: no-repeat;
+		&::after {
+			content: "";
+			@include a-cent(x);
+			position: absolute;
+			width: 186px;
+			height: 57px;
+			bottom: -57px;
+			background-image: url(../img/brace.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			opacity: 0;
+			@include mt;
+		}
+		&.active {
+			.base-diagrams-banner__title{
+				text-decoration: none;
+				color: $primary;
+			}
+			&::after{
+				opacity: 1;
 			}
 		}
 	}
@@ -1005,4 +1017,9 @@ $primary: #4396f7;
 	overflow: hidden;
 }
 
+.tabs__content{
+	&:not(.active) {
+		display: none;
+	}
+}
 @import "accordion";

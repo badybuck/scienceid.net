@@ -5,7 +5,7 @@ mixin accordion-item2(t)
 			block
 mixin accordion2()
 	.section.pt-0.pb-0.container.container--sm
-		+accordion-item2('Рекомендации по реализации траекторий профессионального развития')
+		+accordion-item2('Рекомендации по реализации траекторий профессионального развития').active
 			+b.base-diagrams
 				+e.title Базовые &laquo;диаграммы компетенций&raquo; исследователей
 				p Определение компетенций и уровни их развития можно найти в #[a(href='#') карте компетенций] <br> Ниже базовых «диаграмм компетенций» исследователя приведена шкала профессиональных позиций (должностей)  трека «Научные сотрудники», которая  примерно согласована с диаграммами компетенций  по уровню квалификации
@@ -31,19 +31,44 @@ mixin accordion2()
 							+item(`12.`, `Управление в&nbsp;научной сфере`)
 			+b.base-diagrams-banner
 				+e.top
-					.row.row-20
+					.tabs.tabs--js
+						.tabs__caption.row
+							mixin btn(t, i) 
+								.col-3.tabs__btn&attributes(attributes)
+									+e.item
+										+e.title.text-sm-center!= t
+										+e.img-wrap
+											img(src=`img/diagram-base-${i}.svg`, alt="")
+							+btn(`Начинающий исследователь`, 1).active
+							+btn(`Самостоятельный исследователь`, 2)
+							+btn(`Исследователь высокой квалификации`, 3)
+							+btn(`Исследователь высшей квалификации`, 4)
 						mixin item(t, i)
 							.col-3
 								+e.item&attributes(attributes)
-									+e.title(href='#').text-sm-center!=t
+									+e.title.text-sm-center!=t
 									+e.img-wrap
 										img(src=`img/diagram-base-${i}.svg`, alt="")
-						+item(`Начинающий исследователь`, 1).arrow
-						+item(`Самостоятельный исследователь`, 2)
-						+item(`Исследователь высокой квалификации`, 3)
-						+item(`Исследователь высшей квалификации`, 4)
-						+item(`Ассистент Преподаватель`, 5).mb-0
-						+item(`НС СНС`, 6).mb-0
+						.tabs__wrap
+							.tabs__content.active
+								.row.row-20
+									+item(`Ассистент Преподаватель`, 5).mb-0
+									+item(`НС СНС`, 6).mb-0
+							.tabs__content
+								.row.row-20 
+									+item(`Ассистент Преподаватель`, '2-1').mb-0
+									+item(`НС СНС`, '2-2').mb-0
+									+item(`&nbsp;`, '2-3').mb-0
+							.tabs__content
+								.row.row-20 
+									+item(`Ассистент Преподаватель`, '3-1').mb-0
+									+item(`НС СНС`, '3-2').mb-0
+									+item(`&nbsp;`, '3-3').mb-0
+							.tabs__content
+								.row.row-20 
+									+item(`Ассистент Преподаватель`, '3-1').mb-0
+									+item(`НС СНС`, '3-2').mb-0
+									+item(`&nbsp;`, '3-3').mb-0
 				.row.row-35
 					.col-auto
 						+e.tooltip--blue Исходный уровень компетенций
