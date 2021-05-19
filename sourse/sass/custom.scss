@@ -965,6 +965,15 @@ $primary: #4396f7;
 			background-image: url(../img/bg-arrow.svg);
 			background-size: 100% 100%;
 			background-repeat: no-repeat;
+			position: relative;
+			&:not(:last-child){
+				&::before{
+					content: url(../img/double-arrow.svg);
+					position: absolute;
+					right: -9px;
+					@include a-cent1(y);
+				}
+			}
 			&:first-child {
 				background-image: url(../img/bg-arrow-first.svg);
 			}
@@ -1021,5 +1030,13 @@ $primary: #4396f7;
 	&:not(.active) {
 		display: none;
 	}
+}
+
+
+.foot-btn{
+	margin-top: rem(65);
+	font-size: 16px;
+	width: 770px;
+		padding: rem(19);
 }
 @import "accordion";
