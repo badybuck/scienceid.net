@@ -182,7 +182,7 @@
   }
   &--growth {
     margin-bottom: 0;
-    padding-bottom: rem(20);
+   
     position: relative;
     &:last-child {
       &::after {
@@ -218,6 +218,7 @@
     }
     & > .accordion-item__body {
       padding: 0;
+       padding-bottom: rem(20);
     }
 
     .accordion-item__subtitle {
