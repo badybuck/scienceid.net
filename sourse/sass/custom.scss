@@ -835,7 +835,7 @@ $primary: #4396f7;
 
 .base-diagrams-banner {
 	position: relative;
-	padding: 60px 0;
+	padding: 60px 0 0;
 	&::before {
 		content: "";
 		position: absolute;
@@ -860,7 +860,7 @@ $primary: #4396f7;
 	}
 	.tabs__btn{
 		cursor: pointer;
-		margin-bottom: 170px;
+		margin-bottom: 100px;
 		&::after {
 			content: "";
 			@include a-cent(x);
@@ -941,6 +941,8 @@ $primary: #4396f7;
 .track {
 	padding-top: 50px;
 	padding-bottom: 10px;
+	position: relative;
+	z-index: 4;
 	&__title {
 		font-weight: normal;
 		font-size: 24px;
@@ -1004,7 +1006,7 @@ $primary: #4396f7;
 	li {
 		position: relative;
 		line-height: (25 / 14);
-		padding-left: 48px;
+		// padding-left: 48px;
 		margin-bottom: 10px !important;
 		color: #2b2b2b;
 		&:last-child {

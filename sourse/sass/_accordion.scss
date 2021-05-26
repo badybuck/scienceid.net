@@ -119,10 +119,11 @@
   thead {
     th {
       border-width: 3px;
-      font-size: 12px;
+      // font-size: 12px;
       color: #787878;
       font-weight: normal;
       vertical-align: bottom;
+      font-size: 18px;
     }
   }
   &__th-title {
@@ -238,8 +239,16 @@
   }
   table.instruments {
     width: 100%;
+    td{
+      &:nth-child(even){
+        background-color: rgba($color: $primary, $alpha: .06);
+      }
+      // border-left: 1px solid $primary;
+    }
     tbody {
+      // background-color: rgba($color: $primary, $alpha: .06);
       th {
+        
       }
       tr:last-child {
         th,
@@ -269,6 +278,12 @@
     }
 
     thead {
+      th:nth-child(odd) {
+        background-color: rgba($color: $primary, $alpha: .06);
+      }
+      .heading th {
+        background: none !important;
+      }
       tr.heading {
         th {
           &:first-child {
@@ -286,7 +301,7 @@
       }
       th {
         border-width: 3px;
-        font-size: 12px;
+        // font-size: 12px;
         color: #787878;
         font-weight: normal;
         vertical-align: middle;
