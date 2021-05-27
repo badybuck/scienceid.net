@@ -246,6 +246,9 @@
       // border-left: 1px solid $primary;
     }
     tbody {
+      td{
+        width: 60px;
+      }
       // background-color: rgba($color: $primary, $alpha: .06);
       th {
         
