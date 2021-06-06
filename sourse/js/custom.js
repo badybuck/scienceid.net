@@ -71,6 +71,19 @@ function eventHandler() {
 
 		});
 
+
+	$(document).on('click', "   .scroll-link-js", function () {
+		const elementClick = $(this).attr("href");
+		const destination = $(elementClick).offset().top;
+
+		$('html, body').animate({ scrollTop: destination  - 100}, 1100);
+
+		return false;
+	});
+	$(".open-accordion-js").click(function(){
+		let ac = $(this).attr("href");
+		$(ac).addClass("active");
+	})
 };
 	if (document.readyState !== 'loading') {
 		eventHandler();

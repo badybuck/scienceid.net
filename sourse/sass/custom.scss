@@ -504,6 +504,9 @@ $primary: #4396f7;
 			background-color: $primary;
 			color: #fff;
 		}
+		&::before {
+			opacity: 1;
+		}
 	}
 	&:nth-child(1) {
 		.diagram-block-item__title {

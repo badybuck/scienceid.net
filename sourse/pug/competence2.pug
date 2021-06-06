@@ -30,7 +30,7 @@ include components/logos.pug
 	script.
 										
 		var randomScalingFactor = function () {
-			return Math.round(Math.random() * 5);
+			return Math.round(Math.random() * 4);
 		};
 
 		let bgSet = {
@@ -48,23 +48,7 @@ include components/logos.pug
 			data: {
 				labels: ['', '', '', '', '', '', '', '', '', '', '', ''],
 				datasets: [
-					{
-						...bgSet,
-						data: [
-							5,
-							5,
-							5,
-							5,
-							5,
-							5,
-							5,
-							5,
-							5,
-							5,
-							5,
-							5,
-						]
-					},
+
 					{
 						...bgSet,
 						data: [
@@ -198,7 +182,7 @@ include components/logos.pug
 					},
 					ticks: {
 						color: '#4396f7',
-						max: 5,
+						max: 4,
 						min: 0,
 						stepSize: 1
 						// display: false

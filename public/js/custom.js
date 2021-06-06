@@ -55,6 +55,18 @@ function eventHandler() {
 	$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 		$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active');
 	});
+	$(document).on('click', "   .scroll-link-js", function () {
+		var elementClick = $(this).attr("href");
+		var destination = $(elementClick).offset().top;
+		$('html, body').animate({
+			scrollTop: destination - 100
+		}, 1100);
+		return false;
+	});
+	$(".open-accordion-js").click(function () {
+		var ac = $(this).attr("href");
+		$(ac).addClass("active");
+	});
 }
 
 ;
