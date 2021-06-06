@@ -43,7 +43,7 @@ mixin accordion2()
 								.col-3.tabs__btn&attributes(attributes)
 									+e.item
 										+e.title.text-sm-center!= t
-										+e.img-wrap
+										+e.img-wrap.text-center
 											img(src=`img/diagram-base-${i}.svg`, alt="")
 						
 							+btn(`Начинающий исследователь`, 1)
@@ -54,7 +54,7 @@ mixin accordion2()
 							.col-3
 								+e.item&attributes(attributes)
 									+e.title.text-sm-center!=t
-									+e.img-wrap
+									+e.img-wrap.text-center
 										img(src=`img/diagram-base-${i}.svg`, alt="")
 						mixin tab-footer()
 							.row.row-35.pt-50

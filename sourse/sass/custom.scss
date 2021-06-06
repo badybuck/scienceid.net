@@ -919,6 +919,8 @@ $primary: #4396f7;
 			width: 16px;
 			height: 16px;
 			border-radius: 50%;
+			background-position: center center;
+			background-repeat: no-repeat;
 		}
 		&--blue {
 			&::before {
@@ -932,7 +934,7 @@ $primary: #4396f7;
 		}
 		&--mixed {
 			&::before {
-				background: linear-gradient(to bottom, #f74343 50%, $primary 50%);
+				background: url(../img/ell.svg);
 			}
 		}
 	}
